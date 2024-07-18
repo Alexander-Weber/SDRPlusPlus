@@ -41,14 +41,13 @@ To create a desktop shortcut, rightclick the exe and select `Send to -> Desktop 
 
 Download the latest release from [the Releases page](https://github.com/AlexandreRouma/SDRPlusPlus/releases) and extract to the directory of your choice.
 
-Then, run:
+Then, use apt to install it:
 
 ```sh
-sudo apt install libfftw3-dev libglfw3-dev libvolk2-dev libzstd-dev libairspyhf-dev libiio-dev libad9361-dev librtaudio-dev libhackrf-dev
-sudo dpkg -i sdrpp_debian_amd64.deb
+sudo apt install path/to/the/sdrpp_debian_amd64.deb
 ```
 
-If `libvolk2-dev` is not available, use `libvolk1-dev`.
+**IMPORTANT: You must install the drivers for your SDR. Follow instructions from your manufacturer as to how to do this on your particular distro.**
 
 ### Arch-based
 
@@ -331,7 +330,7 @@ Modules in beta are still included in releases for the most part but not enabled
 | network_source       | Unfinished | -                 | OPT_BUILD_NETWORK_SOURCE       | ✅              | ✅                     | ⛔                         |
 | perseus_source       | Beta       | libperseus-sdr    | OPT_BUILD_PERSEUS_SOURCE       | ⛔              | ✅                     | ✅                         |
 | plutosdr_source      | Working    | libiio, libad9361 | OPT_BUILD_PLUTOSDR_SOURCE      | ✅              | ✅                     | ✅                         |
-| rfnm_source          | Beta       | librfnm           | OPT_BUILD_RFNM_SOURCE          | ⛔              | ⛔                     | ⛔                         |
+| rfnm_source          | Beta       | librfnm           | OPT_BUILD_RFNM_SOURCE          | ⛔              | ✅                     | ✅                         |
 | rfspace_source       | Working    | -                 | OPT_BUILD_RFSPACE_SOURCE       | ✅              | ✅                     | ✅                         |
 | rtl_sdr_source       | Working    | librtlsdr         | OPT_BUILD_RTL_SDR_SOURCE       | ✅              | ✅                     | ✅                         |
 | rtl_tcp_source       | Working    | -                 | OPT_BUILD_RTL_TCP_SOURCE       | ✅              | ✅                     | ✅                         |
